@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color:lightcyan;
+}
+.header{
+    text-align: center;
+    padding: 32px;
+}
+.header h1{
+    font-family: 'Sacramento';
+    font-size: 50px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 100px 100px 100px;
+}
+.column{
+    flex: 25%;
+    max-width: 25%;
+}
+.img-hover-zoom{
+    height: auto;
+    overflow: hidden;
+    border: 5px solid #ffff;
+}
+.img-hover-zoom img{
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition:  transform .5s ease;
+}
+.img-hover-zoom:hover img{
+    transform: scale(1.5);
+}
+
+
+.column img{
+    width: 100%;
+}
+@media screen and (max-width: 800px) {
+    .column{
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .column{
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+#lightbox{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#lightbox-img{
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#close{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.filter-buttons{
+    text-align: center;
+    margin-bottom: 30px;
+    top:0;
+}
+
+.filter-buttons button{
+    padding: 10px 15px;
+    margin: 5px;
+    border: 2px solid lightblue;
+    cursor: pointer;
+}
+
+.column img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.dark{
+    background: black;
+    color: white;
+}
+
+.dark-btn{
+    position: absolute;
+    top:20px;
+    right:20px;
+    padding: 10px 10px;
+    border: 2px solid lightblue;
+    cursor:pointer;
+}
+
+#prev,#next{
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    background: transparent;
+    color:aliceblue ;
+    border: none;
+    cursor: pointer;
+
+}
+
+#prev{ left: 20px;}
+#next{ right: 20px;}

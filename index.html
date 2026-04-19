@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Responsive Photo Gallery</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Responsive Photo Gallery</h1>
+    </div>
+     <!--Category-->
+    <div class="filter-buttons">
+        <button onclick="filterSelection('all')">All</button>
+        <button onclick="filterSelection('natur')">Nature</button>
+        <button onclick="filterSelection('city')">City</button>
+        <button onclick="filterSelection('sunset')">Sunset</button>
+    </div>
+
+    <button onclick="darkMode()" class="dark-btn">Dark Mode🌙</button>
+  
+    <!-- Photo Grid -->
+    <div class="row">
+
+        <div class="column">
+            <div class="img-hover-zoom">
+                <img src="img1.jpg" style="width:100%" alt="" class="gallery-img sunset nature">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="img2.jpg" style="width:100%" alt="" class="gallery-img city ">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="img3.jpg" style="width:100%" alt="" class="gallery-img nature">
+            </div>
+
+        </div>
+
+        <div class="column">
+            <div class="img-hover-zoom">
+                <img src="img4.jpg" style="width:100%" alt="" class="gallery-img sunset nature">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="img5.jpg" style="width:100%" alt="" class="gallery-img nature">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="img6.jpg" style="width:100%" alt="" class="gallery-img city">
+            </div>
+
+        </div>
+
+        <div class="column">
+            <div class="img-hover-zoom">
+                <img src="img7.jpg" style="width:100%" alt="" class="gallery-img nature">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="img8.jpg" style="width:100%" alt="" class="gallery-img  sunset nature">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="img9.jpg" style="width:100%" alt="" class="gallery-img city">
+            </div>
+
+        </div>
+
+        <div class="column">
+            <div class="img-hover-zoom">
+                <img src="img10.jpg" style="width:100%" alt="" class="gallery-img nature">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="img11.jpg" style="width:100%" alt="" class="gallery-img city">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="img12.jpg" style="width:100%" alt="" class="gallery-img sunset">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="lightbox">
+        <span id="close">&times;</span>
+        <button id="prev"><</button>
+        <img id="lightbox-img">
+        <button id="next">></button>
+    </div>
+
+   
+
+
+<script src="gallery.js"></script>
+</body>
+
+</html>
